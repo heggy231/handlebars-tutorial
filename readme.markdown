@@ -127,17 +127,20 @@ Summary: `Handlebars.compile(template)` returns a JS function. We then use this 
 ```
 
 ```js
+// object that we will pass into Handlebar
 var person = {
   firstName: "Betty",
   lastName: "White"
 }
 
-
+// get the inner html from id=person
 var templateScript = $('#person').html();
 // => templateScript = '<h1>{{ firstName }} {{ lastName }}</h1>';
 var template = Handlebars.compile(templateScript);
 
+// pass in object data into compiled template
 $('header').append(template(person));
+// =>  <header> <h1>Betty White</h1> </header>
 ```
 
 ###### Result:
