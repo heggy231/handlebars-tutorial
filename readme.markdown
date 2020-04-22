@@ -117,7 +117,9 @@ Summary: `Handlebars.compile(template)` returns a JS function. We then use this 
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
   <script id="person" type="text/x-handlebars-template">
+    
     <h1>{{ firstName }} {{ lastName }}</h1>
+    
   </script>
 </body>
 
@@ -130,7 +132,9 @@ var person = {
   lastName: "White"
 }
 
+
 var templateScript = $('#person').html();
+// => templateScript = '<h1>{{ firstName }} {{ lastName }}</h1>';
 var template = Handlebars.compile(templateScript);
 
 $('header').append(template(person));
