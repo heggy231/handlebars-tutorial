@@ -61,7 +61,7 @@ var data = {
 };
 ```
 
-```
+```html
 <script id="people-list" type="text/x-handlebars-template">
 {{#each people}}
   <li>{{ firstName }} {{ lastName }}</li>
@@ -90,7 +90,7 @@ Summary: `Handlebars.compile(template)` returns a JS function. We then use this 
 
 ### Example:
 
-```
+```html
 <script id="person" type="text/x-handlebars-template">
   <h1>{{ firstName }} {{ lastName }}</h1>
 </script>
