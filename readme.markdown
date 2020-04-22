@@ -62,11 +62,24 @@ var data = {
 ```
 
 ```html
-<script id="people-list" type="text/x-handlebars-template">
-{{#each people}}
-  <li>{{ firstName }} {{ lastName }}</li>
-{{/each}}
-</script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <header></header>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
+  <script id="person" type="text/x-handlebars-template">
+    <h1>{{ firstName }} {{ lastName }}</h1>
+  </script>
+</body>
+
+</html>
 ```
 
 Since we are passing the people object as an *array* of objects, we can use a block helper and reference the people directly:
@@ -91,9 +104,24 @@ Summary: `Handlebars.compile(template)` returns a JS function. We then use this 
 ### Example:
 
 ```html
-<script id="person" type="text/x-handlebars-template">
-  <h1>{{ firstName }} {{ lastName }}</h1>
-</script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <header></header>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
+  <script id="person" type="text/x-handlebars-template">
+    <h1>{{ firstName }} {{ lastName }}</h1>
+  </script>
+</body>
+
+</html>
 ```
 
 ```js
@@ -111,9 +139,25 @@ $('header').append(template(person));
 ###### Result:
 
 ```html
-<header>
-  <h1>Betty White</h1>
-</header>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <header>
+    <h1>Betty White</h1>
+  </header>
+  
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
+  <script id="person" type="text/x-handlebars-template">
+    <h1>{{ firstName }} {{ lastName }}</h1>
+  </script>
+
+
+</body></html>
 ```
 
 ## Handlebars Syntax
